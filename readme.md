@@ -2,11 +2,11 @@
 
 Hello welcome to the team github page, I (Daniel) will be working from California so I am 3 hours behind you (Assumuing you are in Miami) please DM me on Whatsapp for any technical questions on the project.
 
-## Members
+## Members and Responsiblities
 
-* Daniel Roque De Escobar
-* **PLACEHOLDER**
-* **PLACEHOLDER**
+* **Daniel Roque De Escobar:** System declaration
+* **PLACEHOLDER:**
+* **PLACEHOLDER:**
 
 ## How to Navigate this Repository
 
