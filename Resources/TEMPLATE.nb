@@ -1,0 +1,1511 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     57077,       1503]
+NotebookOptionsPosition[     28406,        882]
+NotebookOutlinePosition[     47268,       1361]
+CellTagsIndexPosition[     47225,       1358]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["Report template",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["\n",
+  FontSlant->"Italic"],
+ StyleBox["(*** Note: you have to modify substantially this template to meet \
+requirements ***)",
+  FontSize->20,
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Title",ExpressionUUID->"d5d5d535-bb87-4127-8a15-d40693762fdf"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["(",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["*** Title",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[":",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[" ***",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]],
+ " ...Analysis of a car suspension system..."
+}], "Title",ExpressionUUID->"2544be5a-7ba1-4f4a-9d20-3cf00801d204"],
+
+Cell[TextData[{
+ StyleBox["(*** ",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Course:",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[" ***)",
+  FontColor->RGBColor[1, 0, 0]],
+ " EEL-3135\nSignals and systems"
+}], "Subtitle",
+ CellChangeTimes->{{3.92620492154537*^9, 
+  3.926204921631361*^9}},ExpressionUUID->"dd04a262-08b5-4e8b-b9c7-\
+d434d90d3652"],
+
+Cell["Section: EEL-3235-U07", "Text",ExpressionUUID->"d14522db-bca6-4b30-9d67-5f802536d423"],
+
+Cell["Year: 2022", "Text",ExpressionUUID->"0a8a1b91-7ddc-4f0b-b71d-42b6dc05b960"],
+
+Cell["Semester: Winter", "Text",ExpressionUUID->"361631c2-dc0d-46e0-ba89-e1e738ac4455"],
+
+Cell["Group No. 71", "Text",ExpressionUUID->"4781d3ca-1205-4795-abc9-583805113952"],
+
+Cell["Student names: ", "Text",ExpressionUUID->"57d885b6-20e4-4bee-b875-8b87dd53c45d"],
+
+Cell["Student PID:", "Text",ExpressionUUID->"3cb1bc62-f2f7-44a3-a02f-28eac316ec54"],
+
+Cell[TextData[{
+ "Student\[CloseCurlyQuote]s signatures ",
+ StyleBox["(",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["scan signatures and insert them below",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]],
+ ": "
+}], "Text",
+ CellFrame->{{0, 0}, {0, 
+  0}},ExpressionUUID->"10b02c0b-ffe9-445d-b996-4730440e9704"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   FrameBox["                               "], TraditionalForm]],
+  ExpressionUUID->"c0c298ea-31e9-4857-8511-bdac591c30ce"],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   FrameBox["                               "], TraditionalForm]],
+  ExpressionUUID->"2ec399bd-a179-4e76-877f-063b8db4d213"],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   FrameBox["                               "], TraditionalForm]],
+  ExpressionUUID->"9c86dd22-092b-4fd1-98ac-f6d08baac8ab"]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 
+  0}},ExpressionUUID->"8551058d-fc7c-4165-954c-d3af6987d689"],
+
+Cell["\:042d\:0442\:043e \:0432\:0435\:0440\:0441\:0438\:044f 1.05h300 \:043e\
+\:0442 24 \:043c\:0430\:044f 2022 \:0433\:043e\:0434\:0430.", "Text",
+ Editable->False,
+ Deletable->False,
+ CellOpen->False,
+ CellChangeTimes->{{3.862334279022978*^9, 
+  3.8623342860059147`*^9}},ExpressionUUID->"247471e4-44a0-447b-8629-\
+9579817d1c9e"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"08eb2083-27c6-4959-8919-b18db5895c26"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Abstr\:0430ct  (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.860436334934257*^9},ExpressionUUID->"1f4ff1b2-a818-4f1d-be0f-\
+070da4a8a5b2"],
+
+Cell["\<\
+An abstract is a highly abbreviated (usually 100-200 words) synopsis of your \
+topic. It should outline your rationale and objectives, as well as your \
+methods, instruments and findings. \
+\>", "Text",ExpressionUUID->"b3eb2150-386a-4af2-a2a0-137abc0b941d"],
+
+Cell["\<\
+Because of its limited length, an abstract cannot go into details on any of \
+these topics. Nor can it report on the limitations of your research or offer \
+suggestions for future research. \
+\>", "Text",ExpressionUUID->"4824acf7-936a-4808-9391-a2e238337239"],
+
+Cell["\<\
+After reading your abstract, people unfamiliar with your topic should know \
+what it is about and whether they want to read the entire report.\
+\>", "Text",ExpressionUUID->"b08ff14d-ea0c-4dad-b39f-a3c44bce1c3c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "1. Intr\:043edu\:0441tion (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.8604363366702347`*^9},ExpressionUUID->"cf01f001-2704-4033-a300-\
+49b62ce6006e"],
+
+Cell["\<\
+The main purpose of the Introduction is to give a description of the problem \
+that will be addressed. In this section authors might discuss the nature of \
+the research, the purpose of the research, the significance of the research \
+problem, and the research questions to be addressed.\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"bc5694a3-d4df-45c6-ab65-7eb769bad6cb"],
+
+Cell["\<\
+Use third person for the report writing. Avoid use of the first person and \
+second person pronouns.\
+\>", "Text",
+ TextJustification->1,ExpressionUUID->"6f0dadba-c6bf-4588-a834-5c5a78858a76"],
+
+Cell["\<\
+(Sections \[OpenCurlyDoubleQuote]Report requirements\[CloseCurlyDoubleQuote], \
+\[OpenCurlyDoubleQuote]How the research report will be checked in class\
+\[CloseCurlyDoubleQuote], \[OpenCurlyDoubleQuote]The project grade will \
+depend on\[CloseCurlyDoubleQuote] below were placed here as a filler. \
+However, use them as a guidance).\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"64f02afd-f07b-490c-93b2-658fede17666"],
+
+Cell["\<\
+Three essential parts of a good introduction are: Rationale, Purpose and \
+Research questions.\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"c881aed6-f912-4bea-9b40-65a1d11ebf96"],
+
+Cell[CellGroupData[{
+
+Cell["Rationale", "Item",
+ FontFamily->"Times New Roman",
+ FontSize->16,
+ FontColor->GrayLevel[
+  0],ExpressionUUID->"a44a5dee-1afb-4898-8bf0-7f0e9e3777c5"],
+
+Cell["\<\
+Somewhere in the introduction you need to inform the reader of the rationale \
+of your research. This is a brief explanation of why your project topic is \
+worthy of study and may make a significant contribution to the body of \
+already existing research.\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"3ee8298a-949c-4e8e-b121-ca7a109dc809"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Purpose", "Item",
+ FontFamily->"Times New Roman",
+ FontSize->16,
+ FontColor->GrayLevel[
+  0],ExpressionUUID->"4f4db47d-5600-4dcb-a069-0c03581b56a4"],
+
+Cell["\<\
+The statement of purpose is not simply a statement of why the project is \
+being done. (That is what the rationale section is for.) 
+Rather, \[OpenCurlyDoubleQuote]purpose\[CloseCurlyDoubleQuote] refers to the \
+goal or objective of your research. The purpose statement should answer \
+questions: \[OpenCurlyDoubleQuote]What are the objectives of my project?\
+\[CloseCurlyDoubleQuote] and \[OpenCurlyDoubleQuote]What do I expect to \
+discover or learn from this research?\[CloseCurlyDoubleQuote]\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"366e1a22-72a7-4c04-98ab-680d4e0fa22b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Research questions", "Item",
+ FontFamily->"Times New Roman",
+ FontSize->16,
+ FontColor->GrayLevel[
+  0],ExpressionUUID->"6015c0dc-3d20-4a2c-9bc9-5409e9916cda"],
+
+Cell["\<\
+The introduction usually ends with a project question or questions. This \
+question should be related to your research purpose, focused and clear.\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"7bfeffec-f5a4-493d-a4d9-33ffc9458e77"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "2. Mathematical concepts in engineering and science (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.860436348998666*^9},ExpressionUUID->"737d8d37-dc75-4b22-bde1-\
+74173d9ecc4d"],
+
+Cell["\<\
+Short essay (length \[LessSlantEqual] 1 page in text-style format) in your \
+own words about practical use of mathematical modelling of a system concepts \
+in engineering and science. Provide several explicit examples.\
+\>", "Text",ExpressionUUID->"1ccb3210-e986-4bfb-ba68-9fbf737ad3ed"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "3. Problem statement and system description (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{3.860436350494671*^9, 
+  3.926204740434023*^9},ExpressionUUID->"a70bd733-df30-4534-800c-\
+ab33c21d6bcf"],
+
+Cell["\<\
+You should describe the subject, the mathematical instruments used, the \
+conditions under which the analysis will be carried out, how the results will \
+be analyzed, etc.\
+\>", "Text",ExpressionUUID->"928f707a-fd5d-4815-bc50-3d85179f35a3"],
+
+Cell["\<\
+Describe the given system from a \[OpenCurlyDoubleQuote]Signals ans systems\
+\[CloseCurlyDoubleQuote] point of view.\
+\>", "Text",ExpressionUUID->"d1cee95e-305d-484c-99f1-749e4352b7c5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "4. System declaration (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.860436353926361*^9},ExpressionUUID->"402d75ab-fde6-40ff-8d42-\
+99777b02e3c6"],
+
+Cell[TextData[{
+ "You should declare the given system by assigning its parameters to ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " variables."
+}], "Text",ExpressionUUID->"a79c1d1f-0f37-4f6b-8e45-42472e98274b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "5. Analysis of the system model using mathematical methods (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{{3.860436356775139*^9, 
+  3.860436362759034*^9}},ExpressionUUID->"d045d7f4-392c-45ed-8363-\
+71dfeac5362f"],
+
+Cell["\<\
+Remember that this section needs to be very explicit. Essential concepts and \
+methods used when analyzing the system have to be linked to \
+\[OpenCurlyDoubleQuote]Signals ans systems\[CloseCurlyDoubleQuote] methods \
+learned in class. \
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"7cc083bc-eafe-4e39-bb84-9b145532a227"],
+
+Cell["\<\
+A good rule of thumb is to provide enough details and explanations so that \
+other readers could reproduce all steps of your research. \
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"495a1eed-bd22-4104-900c-d045b3ebd7bd"],
+
+Cell["\<\
+Failure to provide adequate details, comments, explanations may raise doubts \
+in your readers\[CloseCurlyQuote] minds about your procedures and findings \
+and thus substantially reduce the grade.\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"d6f159bc-de0b-4c95-90c3-29493e25e65d"],
+
+Cell["\<\
+It is desirable to brake this section into multiple subsections.\
+\>", "Text",ExpressionUUID->"35af0b81-2b55-49ca-9476-de6eb5d42942"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "6. Solution optimization and analysis (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{{3.8604363049249287`*^9, 3.860436309515938*^9}, 
+   3.860436364751292*^9},ExpressionUUID->"823427e4-ffac-4299-89f1-\
+aca9d8f64a74"],
+
+Cell[TextData[{
+ "Output signals of the given system have to be verified. It has to be shown \
+using Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " tools that your solutions satisfy the assigned system. Explicit comments \
+and justification have to be provided. "
+}], "Text",ExpressionUUID->"4b8c7ebe-2655-494e-9569-53396614cdaa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "7. Detailed answer (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.860436366863213*^9},ExpressionUUID->"c2109e5d-6a24-4a7b-81d8-\
+dbffd49b3301"],
+
+Cell["\<\
+Provide a full detailed final answers and describe methods utilized in this \
+project to solve it.\
+\>", "Text",
+ FontFamily->"Times New Roman",
+ FontColor->GrayLevel[
+  0],ExpressionUUID->"15d9901f-a9a5-4708-9d4f-b5b320cb9469"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "8. Conclusions (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.860436288726186*^9},ExpressionUUID->"2cabf4d4-23b7-41da-b076-\
+e8191bcff731"],
+
+Cell["\<\
+Summarize main points you have made in your introduction. The conclusion \
+provides a sense of closure \[Dash] that questions \
+\[OpenCurlyDoubleQuote]opened\[CloseCurlyDoubleQuote] by the introduction \
+have now been \[OpenCurlyDoubleQuote]closed\[CloseCurlyDoubleQuote] by the \
+body of the report. \
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"b049e5af-566a-4f54-912e-b1dbc9b0c97c"],
+
+Cell["\<\
+The concluding section makes it clear how your findings are true, and uses \
+some way of indicating the completeness of the writing.\
+\>", "Text",ExpressionUUID->"d7516f47-ba0a-4769-ae39-2843dcc023cf"],
+
+Cell["\<\
+Review (very briefly) the research methods you employed in the project.\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"6c0aca3d-0bf0-42e9-a43d-56df1a8e2bcd"],
+
+Cell["Repeat your findings and explain them in abbreviated form.", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"74359437-cac7-4498-b11e-38a2d6bcaeca"],
+
+Cell["Discuss the broader implications of those findings.", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"4100bd47-59cc-4e17-a2db-f5a35bacc7fa"],
+
+Cell["\<\
+Mention the limitations of your research (due to its scope or its weaknesses).\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"fcab5ad6-9115-4520-86b5-55196f966614"],
+
+Cell[TextData[{
+ "Remember that Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " was just an instrument used to analyse and solve algebraic problem. \
+Statements like \[OpenCurlyDoubleQuote]We learned how to use ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyDoubleQuote] do not belong to the \
+\[OpenCurlyDoubleQuote]Conclusions\[CloseCurlyDoubleQuote] section."
+}], "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"3ffd43fb-81fd-4b6e-8e38-174495412572"],
+
+Cell["Offer suggestions for future research related to yours.", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"1c01e0e2-a966-4019-993a-48542adf30f5"],
+
+Cell["The list of conclusions has to be numbered as follows:", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"d62b40f2-3212-4e37-8bc0-823703985e80"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["(...",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Conclusion No. 1...",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",ExpressionUUID->"117d1cd0-35ac-4a32-a99e-c5bb78f6b707"],
+
+Cell[TextData[{
+ StyleBox["(...",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Conclusion No. 2...",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",ExpressionUUID->"b4d40151-6821-4089-9aed-1982aa6e1eaf"],
+
+Cell[TextData[{
+ StyleBox["(...",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Conclusion No. 3...",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",ExpressionUUID->"9df389dd-4ff9-4d22-bd88-6d8b0073348e"],
+
+Cell["...", "ItemNumbered",ExpressionUUID->"bdda91e2-73e2-4e41-a58d-604ab358a8c7"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "9. Learning outcomes (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.860436318261062*^9},ExpressionUUID->"0a791bb5-ad77-45cb-980b-\
+4f29f1932c26"],
+
+Cell["\<\
+Specify what the team members learned while working on this project.\
+\[NonBreakingSpace] Answer the question: \[OpenCurlyDoubleQuote]What have \
+I/we learned when working on this project?\[CloseCurlyDoubleQuote]\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"fb7071b5-d50a-4ca9-b19e-db678a6932e8"],
+
+Cell["\<\
+Outcomes are usually expressed as new knowledge, gained skills, or attitudes.\
+\>", "Text",ExpressionUUID->"a4fdce3c-1058-4141-ab5b-a21b44d6a567"],
+
+Cell["Format your answers as a numbered list.", "Text",ExpressionUUID->"dad20510-da48-49df-a0df-bdb4ea8c0fa9"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["(...",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Learning outcome No. 1...",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",ExpressionUUID->"7315988d-d7d6-455f-9206-05d909ae42a9"],
+
+Cell[TextData[{
+ StyleBox["(...",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Learning outcome No. 2...",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",ExpressionUUID->"9da525a6-a06c-4c93-8d09-173bfe691019"],
+
+Cell[TextData[{
+ StyleBox["(...",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Learning outcome No. 3...",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",ExpressionUUID->"b51cd941-7d61-4c04-93c5-b567a2bf0710"],
+
+Cell["...", "ItemNumbered",ExpressionUUID->"70770c14-e9bb-4e4f-ac29-6806da066caa"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "10. Individual contribution of each team member (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.860436320981798*^9},ExpressionUUID->"c5f3905f-acd2-4101-a8cd-\
+086559b3808e"],
+
+Cell["\<\
+Briefly describe individual contribution of each team member.\
+\>", "Item",ExpressionUUID->"e7d89411-7cae-403b-815e-616c8acd7703"],
+
+Cell[TextData[{
+ StyleBox["Indicate the percentage (in %) of the contribution of each team \
+member",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ "."
+}], "Item",ExpressionUUID->"3ba787b1-487e-42dc-aad0-35d00d50453b"],
+
+Cell["\<\
+Remember the following: you have to indicate percentage of each team member \
+contribution to your project report. \
+\>", "Text",ExpressionUUID->"b486fc2e-5c1f-4cef-89b2-7fbc967c3402"],
+
+Cell["\<\
+Those students whose contribution is less compared to it of other team \
+members, will get prorated lower grade. \
+\>", "Text",ExpressionUUID->"c123f466-6f04-415c-ab94-912c89827b3c"],
+
+Cell["\<\
+Team member whose contribution is 0% automatically receive a failing grade \
+for the course.\
+\>", "Text",ExpressionUUID->"fbc66d6d-2c45-4cb8-a2b0-14b137903f6c"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Last Name, First Name, PID \[Dash] (",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["contribution percentage",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[") %",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"4bb434ba-ee1d-4035-8669-3cd8fa132356"],
+
+Cell[TextData[{
+ StyleBox["Last Name, First Name, PID \[Dash] (",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["contribution percentage",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[") %",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"6bb577de-4d30-44e5-a98d-8e8d5508fbc3"],
+
+Cell[TextData[{
+ StyleBox["Last Name, First Name, PID \[Dash] (",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["contribution percentage",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[") %",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"5b259678-8307-4b7d-9af5-13c4a69c50fd"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["11. Acknowledgement (optional)", "Section",ExpressionUUID->"d5b804d8-3977-43d5-9b45-30a9c1e2c519"],
+
+Cell["\<\
+This sections is used to recognize all contributors, if any, who helped your \
+team in your work on this project. For example, you can give credit to other \
+students who you cooperated with.\
+\>", "Text",
+ FontFamily->
+  "Times New Roman",ExpressionUUID->"9db82ff7-71f9-4c14-98cb-b9971a266f70"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "References (",
+ StyleBox["mandatory section",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ ")"
+}], "Section",
+ CellChangeTimes->{
+  3.860436324590003*^9},ExpressionUUID->"4bc46e55-1713-46f1-9657-\
+dbbe2fc5fcb5"],
+
+Cell["\<\
+Using proper citation style allows us to give credit to the creators of the \
+material you were using.  It is how we use information responsibly and \
+respectfully.  \
+\>", "Text",ExpressionUUID->"1664835e-7a82-455a-ae03-30bfbf058720"],
+
+Cell["\<\
+By using citations, your claims and theories become more authorized and \
+credible because you are providing supporting evidence from other sources. \
+Citations also allow you avoid plagiarism. \
+\>", "Text",ExpressionUUID->"ce63d789-da91-411d-a24b-abd7a60f06a4"],
+
+Cell["\<\
+Any student who fails to give credit for information, ideas, expressions, or \
+materials taken from another sources, including Internet resources, may be \
+considered guilty of plagiarism. FIU will not tolerate plagiarism.\
+\>", "Text",ExpressionUUID->"98e62b71-b93f-470e-a7bb-4735e6d6feb2"],
+
+Cell["\<\
+Provide references to all sources of information used in the project. Make \
+numbered reference list using IEEE citation style:\
+\>", "Text",ExpressionUUID->"108168be-18fe-46ba-acc5-a35c09ce4eb9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"textBlueStyle", "@", 
+  RowBox[{"Hyperlink", "[", 
+   RowBox[{
+   "\"\<How to Cite References: IEEE Documentation Style (PDF)\>\"", ",", 
+    "\"\<https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%\
+20Citation%20Guidelines.pdf\>\"", ",", 
+    RowBox[{"Appearance", "\[Rule]", "\"\<Button\>\""}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"textBlueStyle", "@", 
+  RowBox[{"Hyperlink", "[", 
+   RowBox[{
+   "\"\<IEEE Citation Style Guide (PDF)\>\"", ",", " ", 
+    "\"\<http://www.ijssst.info/info/IEEE-Citation-StyleGuide.pdf\>\"", ",", 
+    RowBox[{"Appearance", "\[Rule]", "\"\<Button\>\""}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"AutoCollapse", "[", "]"}]}], "Input",
+ InitializationCell->True,
+ CellLabel->
+  "In[745]:=",ExpressionUUID->"abe1d111-dc77-4a1c-9032-270c42789685"],
+
+Cell[BoxData[
+ StyleBox[
+  TemplateBox[{"\"How to Cite References: IEEE Documentation Style (PDF)\"", {
+     URL["https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%\
+20Citation%20Guidelines.pdf"], None}, 
+    "https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%\
+20Citation%20Guidelines.pdf", "Hyperlink", {"HyperlinkActive"}, 
+    BaseStyle -> {"Hyperlink"}, Appearance -> "Button"},
+   "HyperlinkTemplate"], "Text",
+  StripOnInput->False,
+  Hyphenation->True,
+  LineIndent->0,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontColor->RGBColor[0, 0, 1]]], "Output",
+ CellLabel->
+  "Out[745]=",ExpressionUUID->"c9b16ed4-fb76-427e-bfa2-cfe8162082d3"],
+
+Cell[BoxData[
+ StyleBox[
+  TemplateBox[{"\"IEEE Citation Style Guide (PDF)\"", {
+     URL["http://www.ijssst.info/info/IEEE-Citation-StyleGuide.pdf"], None}, 
+    "http://www.ijssst.info/info/IEEE-Citation-StyleGuide.pdf", "Hyperlink", {
+    "HyperlinkActive"}, BaseStyle -> {"Hyperlink"}, Appearance -> "Button"},
+   "HyperlinkTemplate"], "Text",
+  StripOnInput->False,
+  Hyphenation->True,
+  LineIndent->0,
+  LineColor->RGBColor[0, 0, 1],
+  FrontFaceColor->RGBColor[0, 0, 1],
+  BackFaceColor->RGBColor[0, 0, 1],
+  GraphicsColor->RGBColor[0, 0, 1],
+  FontColor->RGBColor[0, 0, 1]]], "Output",
+ CellLabel->
+  "Out[746]=",ExpressionUUID->"fff9a336-15d8-4ca1-980b-d21a97029b89"]
+}, {2, 3}]],
+
+Cell["\<\
+Using any work done by someone else without reference to it will be \
+considered as cheating.\
+\>", "Text",ExpressionUUID->"74080eab-8baa-4b4d-8f48-5c27a41d4a8f"],
+
+Cell["\<\
+The text of the report should contain references to all sources shown in your \
+bibliography list.\
+\>", "Text",ExpressionUUID->"a9977392-7360-4941-8ca2-f50fd04c0e92"],
+
+Cell["Make sure to use IEEE reference format.", "Text",ExpressionUUID->"0be6f085-c368-4d6b-b985-659f66b2bd2f"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["F. Ulaby, A. Yangle, \[OpenCurlyDoubleQuote]Signals & \
+Systems: Theory and Applications\[CloseCurlyDoubleQuote], 2nd ed., Michigan \
+Publishing, 2018,  p. 7999",
+ FontFamily->"Times New Roman"]], "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"eee00e9c-05f4-4619-942e-61a64df59056"],
+
+Cell[TextData[{
+ StyleBox["Ervin Alvarez-S\[AAcute]nchez, \[OpenCurlyDoubleQuote]A \
+quarter-car suspension system: car body mass estimator and sliding mode \
+control\[CloseCurlyDoubleQuote], ",
+  FontFamily->"Times New Roman"],
+ StyleBox["Procedia Technology",
+  FontFamily->"Times New Roman",
+  FontSlant->"Italic"],
+ StyleBox[", 2013, vol. 7, pp. 208-214.",
+  FontFamily->"Times New Roman"]
+}], "ItemNumbered",
+ CellChangeTimes->{{3.860436475428553*^9, 3.8604364754291983`*^9}},
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"3efba9a2-4217-4749-880b-66bf8f940c32"],
+
+Cell[TextData[StyleBox["Abhijeet S. Taksale, \[OpenCurlyDoubleQuote]Modeling, \
+Analysis and Control of Passive and Active Suspension System for a Quarter \
+Car\[CloseCurlyDoubleQuote], International Journal of Applied Engineering \
+Research, 2013, vol. 8, no. 12, pp. 1405-1414.",
+ FontFamily->"Times New Roman"]], "ItemNumbered",
+ CellChangeTimes->{{3.860436476262302*^9, 3.860436557090898*^9}},
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"c0978165-1c08-4272-8a7a-8fd2d0943a10"],
+
+Cell[TextData[{
+ StyleBox["Jan Warczek, Rafa\[LSlash] Burdzik, Grzegorz Peru\:0144, \
+\[OpenCurlyDoubleQuote]The Method for Identification of Damping Coefficient \
+of the Trucks Suspension\[CloseCurlyDoubleQuote], ",
+  FontFamily->"Times New Roman"],
+ StyleBox["Key Engineering Materials",
+  FontFamily->"Times New Roman",
+  FontSlant->"Italic"],
+ StyleBox[", 2014, vol. 588, pp. 281-289.",
+  FontFamily->"Times New Roman"]
+}], "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"ac0fa99c-e24d-4c40-a1ce-92df56916d13"],
+
+Cell[TextData[{
+ StyleBox["Signal, ",
+  FontFamily->"Times New Roman"],
+ "Wikipedia",
+ StyleBox[".com [online] 2021, ",
+  FontFamily->"Times New Roman"],
+ "https://https://en.wikipedia.org/wiki/Signal",
+ StyleBox[" (Accessed: 8 May, 2022).",
+  FontFamily->"Times New Roman"]
+}], "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"e1e0a668-67d3-4ac3-839d-1686e16e81cc"],
+
+Cell["\<\
+IEEE citation standards, ieee.org [online] 2020, \
+https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%20Citation%\
+20Guidelines.pdf (Accessed: 7 May, 2022).\
+\>", "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"d02c6005-0508-4358-b331-095e0ae58951"],
+
+Cell[TextData[{
+ StyleBox["(...",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox["Reference...",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0, 0]],
+ StyleBox[")",
+  FontColor->RGBColor[1, 0, 0]]
+}], "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"80a6cd3f-6b6a-4007-90c6-68023a3c5578"],
+
+Cell["...", "ItemNumbered",
+ FontFamily->"Times New Roman",
+ FontSize->14,ExpressionUUID->"03dcdad1-94ac-464a-b88d-a6bfae2a6449"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+CellGrouping->Manual,
+WindowSize->{1096, 721},
+WindowMargins->{{Automatic, -20.5}, {Automatic, 362}},
+PrintingCopies->1,
+PrintingStartingPageNumber->1,
+PrintingPageRange->{1, Automatic},
+PageHeaders->{{
+   Cell[
+    TextData[
+     StyleBox[
+      RowBox[{"EEL", "-", "3135"}], FontFamily -> "Times New Roman", FontSize -> 
+      10, FontWeight -> "Regular", FontSlant -> "Plain"]], "Header", 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], 
+   Cell[
+    TextData[
+     StyleBox[
+      RowBox[{
+       "Analysis", " ", "of", " ", "a", " ", "car", " ", "suspension", " ", 
+        "system"}], "Header", FontFamily -> "Times New Roman", FontSize -> 10,
+       FontWeight -> "Regular", FontSlant -> "Plain"]], "Header"], 
+   Cell[
+    TextData[
+     StyleBox[
+     "FIU", FontFamily -> "Times New Roman", FontSize -> 10, FontWeight -> 
+      "Regular", FontSlant -> "Plain"]], "Header", 
+    CellMargins -> {{Inherited, 0}, {Inherited, Inherited}}]}, {
+   Cell[
+    TextData[
+     StyleBox[
+     "FIU", FontFamily -> "Times New Roman", FontSize -> 10, FontWeight -> 
+      "Regular", FontSlant -> "Plain"]], "Header", 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], 
+   Cell[
+    TextData[
+     StyleBox[
+      RowBox[{
+       "Analysis", " ", "of", " ", "a", " ", "car", " ", "suspension", " ", 
+        "system"}], "Header", FontFamily -> "Times New Roman", FontSize -> 10,
+       FontWeight -> "Regular", FontSlant -> "Plain"]], "Header"], 
+   Cell[
+    TextData[
+     StyleBox[
+      RowBox[{"EEL", "-", "3135"}], FontFamily -> "Times New Roman", FontSize -> 
+      10, FontWeight -> "Regular", FontSlant -> "Plain"]], "Header", 
+    CellMargins -> {{Inherited, 0}, {Inherited, Inherited}}]}},
+PageFooters->{{
+   Cell[
+    TextData[
+     StyleBox[
+      RowBox[{"Page", " ", 
+        CounterBox["Page", CounterFunction :> Identity], " ", "of", " ", 
+        CounterBox["LastPage", CounterFunction :> Identity]}], FontFamily -> 
+      "Times New Roman", FontSize -> 8, FontWeight -> "Regular", FontSlant -> 
+      "Plain"]], "Footer", 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], 
+   Cell[
+    TextData[
+     StyleBox[
+      RowBox[{
+       "May", " ", "not", " ", "be", " ", "copied", " ", "or", " ", 
+        "distributed", " ", "without", " ", "the", " ", "permission", " ", 
+        "of", " ", "the", " ", "authors"}], "Footer", FontFamily -> 
+      "Times New Roman", FontSize -> 8, FontWeight -> "Regular", FontSlant -> 
+      "Plain"]], "Footer"], 
+   Cell[
+    TextData[
+     StyleBox[
+      ValueBox["FileName"], FontFamily -> "Times New Roman", FontSize -> 8, 
+      FontWeight -> "Regular", FontSlant -> "Plain"]], "Footer", 
+    CellMargins -> {{Inherited, 0}, {Inherited, Inherited}}]}, {
+   Cell[
+    TextData[
+     StyleBox[
+      ValueBox["FileName"], FontFamily -> "Times New Roman", FontSize -> 8, 
+      FontWeight -> "Regular", FontSlant -> "Plain"]], "Footer", 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], 
+   Cell[
+    TextData[
+     StyleBox[
+      RowBox[{
+       "May", " ", "not", " ", "be", " ", "copied", " ", "or", " ", 
+        "distributed", " ", "without", " ", "the", " ", "permission", " ", 
+        "of", " ", "the", " ", "authors"}], "Footer", FontFamily -> 
+      "Times New Roman", FontSize -> 8, FontWeight -> "Regular", FontSlant -> 
+      "Plain"]], "Footer"], 
+   Cell[
+    TextData[
+     StyleBox[
+      RowBox[{"Page", " ", 
+        CounterBox["Page", CounterFunction :> Identity], " ", "of", " ", 
+        CounterBox["LastPage", CounterFunction :> Identity]}], FontFamily -> 
+      "Times New Roman", FontSize -> 8, FontWeight -> "Regular", FontSlant -> 
+      "Plain"]], "Footer", 
+    CellMargins -> {{Inherited, 0}, {Inherited, Inherited}}]}},
+PageHeaderLines->{True, True},
+PageFooterLines->{True, True},
+PrintingOptions->{"FacingPages"->True,
+"FirstPageFace"->Right,
+"FirstPageFooter"->True,
+"FirstPageHeader"->False,
+"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{612, 792}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Text", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Text"], FontFamily -> "Times New Roman", FontColor -> 
+          GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "Text", "SlideShow", StyleDefinitions -> StyleData["Text"]]]}, 
+        Open]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Items", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ItemNumbered"], CellDingbat -> Cell[
+            TextData[{
+              CounterBox["ItemNumbered"], "."}], FontWeight -> "Bold", 
+            FontColor -> RGBColor[0, 0., 0.]], ShowGroupOpener -> True, 
+          FontFamily -> "Times New Roman", 
+          PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, 
+          FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "ItemNumbered", "SlideShow", StyleDefinitions -> 
+           StyleData["ItemNumbered"]]]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["SubitemNumbered"], CellDingbat -> Cell[
+            TextData[{
+              CounterBox["ItemNumbered"], ".", 
+              CounterBox["SubitemNumbered"], "."}], FontWeight -> "Bold", 
+            FontColor -> RGBColor[0., 0., 0.]], FontFamily -> 
+          "Times New Roman", FontWeight -> "Regular", FontSlant -> "Plain", 
+          PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, 
+          FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "SubitemNumbered", "SlideShow", StyleDefinitions -> 
+           StyleData["SubitemNumbered"]]]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Item"], CellDingbat -> "\[FilledSmallCircle]", 
+          ShowGroupOpener -> True, FontFamily -> "Times New Roman", 
+          PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, 
+          FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "Item", "SlideShow", StyleDefinitions -> StyleData["Item"]], 
+          CellDingbat -> "\[FilledSmallCircle]", ShowGroupOpener -> True], 
+         Cell[
+          StyleData["Item", "Printout"], CellDingbat -> StyleBox[
+            AdjustmentBox[
+            "\[FilledSmallCircle]", BoxBaselineShift -> -0.3, 
+             BoxMargins -> {{0., 0.}, {0.3, -0.3}}], FontColor -> 
+            GrayLevel[0]], 
+          CellMargins -> {{34, Inherited}, {Inherited, Inherited}}, 
+          CellFrameLabelMargins -> 4]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subitem"], CellDingbat -> "\[FilledSmallSquare]", 
+          ShowGroupOpener -> True, FontFamily -> "Times New Roman", FontColor -> 
+          GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "Subitem", "SlideShow", StyleDefinitions -> StyleData["Subitem"]], 
+          CellDingbat -> "\[FilledSmallSquare]", ShowGroupOpener -> True], 
+         Cell[
+          StyleData["Subitem", "Printout"], CellDingbat -> StyleBox[
+            AdjustmentBox[
+            "\[FilledSmallSquare]", BoxBaselineShift -> -0.3, 
+             BoxMargins -> {{0., 0.}, {0.3, -0.3}}], FontColor -> 
+            GrayLevel[0]], 
+          CellMargins -> {{58, Inherited}, {Inherited, Inherited}}, 
+          CellFrameLabelMargins -> 4]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ItemParagraph"], FontFamily -> "Times New Roman", 
+          PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, 
+          FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "ItemParagraph", "SlideShow", StyleDefinitions -> 
+           StyleData["ItemParagraph"]]], 
+         Cell[
+          StyleData["ItemParagraph", "Printout"], 
+          CellMargins -> {{34, Inherited}, {Inherited, Inherited}}]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["SubitemParagraph"], FontFamily -> "Times New Roman", 
+          FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "SubitemParagraph", "SlideShow", StyleDefinitions -> 
+           StyleData["SubitemParagraph"]]], 
+         Cell[
+          StyleData["SubitemParagraph", "Printout"], 
+          CellMargins -> {{58, Inherited}, {Inherited, Inherited}}]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["SubsubitemParagraph"], FontFamily -> "Times New Roman", 
+          FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "SubsubitemParagraph", "SlideShow", StyleDefinitions -> 
+           StyleData["SubsubitemParagraph"]]], 
+         Cell[
+          StyleData["SubsubitemParagraph", "Printout"], 
+          CellMargins -> {{82, Inherited}, {Inherited, Inherited}}]}, Open]]},
+      Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Input and Output", "Section"], 
+      Cell[
+       StyleData["Input"], ShowCellLabel -> False, Background -> 
+       GrayLevel[0.9]], 
+      Cell[
+       StyleData["Output"], ShowCellLabel -> False, Background -> 
+       GrayLevel[1]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Sections", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Section"], ShowGroupOpener -> True, FontFamily -> 
+          "Times New Roman", FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "Section", "SlideShow", StyleDefinitions -> StyleData["Section"]], 
+          ShowGroupOpener -> True], 
+         Cell[
+          StyleData["Section", "Printout"]]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subsection"], ShowGroupOpener -> True, FontFamily -> 
+          "Times New Roman", FontColor -> Automatic], 
+         Cell[
+          StyleData[
+          "Subsection", "SlideShow", StyleDefinitions -> 
+           StyleData["Subsection"]]], 
+         Cell[
+          StyleData["Subsection", "Printout"], 
+          CellMargins -> {{10, Inherited}, {8., 16}}]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subsubsection"], ShowGroupOpener -> True, FontFamily -> 
+          "Times New Roman", FontWeight -> "Plain", FontColor -> Automatic], 
+         Cell[
+          StyleData[
+          "Subsubsection", "SlideShow", StyleDefinitions -> 
+           StyleData["Subsubsection"]]], 
+         Cell[
+          StyleData["Subsubsection", "Printout"], 
+          CellMargins -> {{10, Inherited}, {6, 16}}]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Chapter"], CellFrame -> {{0, 0}, {2, 0}}, FontFamily -> 
+          "Times New Roman", FontSize -> 64, FontWeight -> "SemiBold", 
+          PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, 
+          FontColor -> RGBColor[0., 0., 0.4258945601586938]], 
+         Cell[
+          StyleData[
+          "Chapter", "SlideShow", StyleDefinitions -> StyleData["Chapter"]], 
+          ShowGroupOpener -> True]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subchapter"], CellFrame -> {{0, 0}, {2, 0}}, CellDingbat -> 
+          None, FontFamily -> "Times New Roman", FontSize -> 56, FontWeight -> 
+          "SemiBold", FontColor -> RGBColor[0., 0., 0.4258945601586938]], 
+         Cell[
+          StyleData[
+          "Subchapter", "SlideShow", StyleDefinitions -> 
+           StyleData["Subchapter"]], ShowGroupOpener -> True]}, Open]]}, 
+     Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Headings", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Title"], ShowGroupOpener -> True, FontFamily -> 
+          "Times New Roman", FontWeight -> "Plain", FontSlant -> "Plain", 
+          FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}, 
+          PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, 
+          FontColor -> Automatic], 
+         Cell[
+          StyleData[
+          "Title", "SlideShow", StyleDefinitions -> StyleData["Title"]], 
+          FontSize -> 72, FontSlant -> "Plain", 
+          FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}, 
+          PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}], 
+         Cell[
+          StyleData["Title", "Printout"]]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subtitle"], FontFamily -> "Times New Roman", FontSlant -> 
+          "Plain", FontColor -> Automatic], 
+         Cell[
+          StyleData[
+          "Subtitle", "SlideShow", StyleDefinitions -> 
+           StyleData["Subtitle"]]], 
+         Cell[
+          StyleData["Subtitle", "Printout"]]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Subsubtitle"], FontFamily -> "Times New Roman", 
+          FontColor -> RGBColor[0., 0., 0.5]], 
+         Cell[
+          StyleData[
+          "Subsubtitle", "SlideShow", StyleDefinitions -> 
+           StyleData["Subsubtitle"]]], 
+         Cell[
+          StyleData["Subsubtitle", "Printout"]]}, Open]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Special Styles", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DisplayFormula"], FontFamily -> "Times New Roman", 
+          FontWeight -> "Regular", FontSlant -> "Plain", 
+          PrivateFontOptions -> {"FontPostScriptName" -> "Automatic"}, 
+          FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "DisplayFormula", "SlideShow", StyleDefinitions -> 
+           StyleData["DisplayFormula"]]], 
+         Cell[
+          StyleData["DisplayFormula", "Printout"], 
+          CellMargins -> {{58, Inherited}, {Inherited, Inherited}}]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Formula-Times-24"], TextAlignment -> Center, 
+          MenuSortingValue -> 10000, FontFamily -> "Times New Roman", 
+          FontSize -> 24, FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "Formula-Times-24", "SlideShow", StyleDefinitions -> 
+           StyleData["Formula-Times-24"]]]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Formula-Times-18"], TextAlignment -> Center, 
+          MenuSortingValue -> 10000, FontFamily -> "Times New Roman", 
+          FontSize -> 18, FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "Formula-Times-18", "SlideShow", StyleDefinitions -> 
+           StyleData["Formula-Times-18"]]]}, Open]], 
+      Cell[
+       StyleData["Text-12"], CellMargins -> {{30, 1}, {4, 4}}, 
+       MenuSortingValue -> 10000, FontFamily -> "Times New Roman", FontSize -> 
+       12, FontColor -> GrayLevel[0]], 
+      Cell[
+       StyleData["Text-14"], CellMargins -> {{30, 1}, {4, 4}}, 
+       MenuSortingValue -> 10000, FontFamily -> "Times New Roman", FontSize -> 
+       14, FontColor -> GrayLevel[0]], 
+      Cell[
+       StyleData["Text-16"], CellMargins -> {{36, 1}, {4, 4}}, 
+       MenuSortingValue -> 10000, FontFamily -> "Times New Roman", FontSize -> 
+       16, FontColor -> GrayLevel[0]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData[
+          "DisplayFormulaNumbered", StyleDefinitions -> 
+           StyleData["DisplayFormula"]], CellFrameLabels -> {{None, 
+             Cell[
+              TextData[{"(", 
+                CounterBox["DisplayFormulaNumbered"], ")"}], 
+              "DisplayFormulaEquationNumber"]}, {None, None}}, 
+          CounterIncrements -> "DisplayFormulaNumbered", MenuSortingValue -> 
+          1710], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "Presentation"], 
+          CellMargins -> {{100, Inherited}, {1.5 Inherited, 1.5 Inherited}}, 
+          LineSpacing -> {1, 5}], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "SlideShow"], 
+          CellMargins -> {{
+            0.135 FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}], 0.03 
+             FrontEnd`AbsoluteCurrentValue[{WindowSize, 1}]}, {
+            1.5 Inherited, 1.5 Inherited}}], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "Condensed"], 
+          CellMargins -> {{50, Inherited}, {Inherited, Inherited}}, 
+          LineSpacing -> {1, 1}, FontSize -> 11], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "Printout"], 
+          CellMargins -> {{49, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["DisplayFormulaNumbered", "PrintoutGray"], 
+          CellMargins -> {{49, Inherited}, {Inherited, Inherited}}]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DisplayFormulaEquationNumber"], FontFamily -> 
+          "Times New Roman", FontColor -> GrayLevel[0]], 
+         Cell[
+          StyleData[
+          "DisplayFormulaEquationNumber", "SlideShow", StyleDefinitions -> 
+           StyleData["DisplayFormulaEquationNumber"]]], 
+         Cell[
+          StyleData["DisplayFormulaEquationNumber", "Printout"]]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["HeaderTitle"], StyleMenuListing -> None, FontColor -> 
+          GrayLevel[0]], 
+         Cell[
+          StyleData["HeaderTitle", "Printout"], Magnification -> 1.], 
+         Cell[
+          StyleData["HeaderTitle", "PrintoutGray"], Magnification -> 1.]}, 
+        Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["FooterSection"], StyleMenuListing -> None, FontColor -> 
+          GrayLevel[0]], 
+         Cell[
+          StyleData["FooterSection", "Printout"], Magnification -> 1.], 
+         Cell[
+          StyleData["FooterSection", "PrintoutGray"], Magnification -> 1.]}, 
+        Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["FooterTitle"], StyleMenuListing -> None, FontColor -> 
+          GrayLevel[0]], 
+         Cell[
+          StyleData["FooterTitle", "Printout"], Magnification -> 1.], 
+         Cell[
+          StyleData["FooterTitle", "PrintoutGray"], Magnification -> 1.]}, 
+        Open]], 
+      Cell[
+       StyleData["Definition"], CellFrame -> 2, 
+       CellMargins -> {{100, 100}, {10, 10}}, MenuSortingValue -> 10000, 
+       FontFamily -> "Times New Roman", FontSize -> 18, Background -> 
+       RGBColor[0.94, 0.91, 0.88]]}, Closed]]}, Visible -> False, 
+  FrontEndVersion -> 
+  "14.0 for Microsoft Windows (64-bit) (December 12, 2023)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"9fb5f6b6-630b-d246-a969-1a2ab61e2613"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 378, 11, 176, "Title",ExpressionUUID->"d5d5d535-bb87-4127-8a15-d40693762fdf"],
+Cell[CellGroupData[{
+Cell[982, 37, 426, 14, 218, "Title",ExpressionUUID->"2544be5a-7ba1-4f4a-9d20-3cf00801d204"],
+Cell[1411, 53, 371, 12, 116, "Subtitle",ExpressionUUID->"dd04a262-08b5-4e8b-b9c7-d434d90d3652"],
+Cell[1785, 67, 92, 0, 48, "Text",ExpressionUUID->"d14522db-bca6-4b30-9d67-5f802536d423"],
+Cell[1880, 69, 81, 0, 48, "Text",ExpressionUUID->"0a8a1b91-7ddc-4f0b-b71d-42b6dc05b960"],
+Cell[1964, 71, 87, 0, 48, "Text",ExpressionUUID->"361631c2-dc0d-46e0-ba89-e1e738ac4455"],
+Cell[2054, 73, 83, 0, 48, "Text",ExpressionUUID->"4781d3ca-1205-4795-abc9-583805113952"],
+Cell[2140, 75, 86, 0, 48, "Text",ExpressionUUID->"57d885b6-20e4-4bee-b875-8b87dd53c45d"],
+Cell[2229, 77, 83, 0, 48, "Text",ExpressionUUID->"3cb1bc62-f2f7-44a3-a02f-28eac316ec54"],
+Cell[2315, 79, 367, 12, 48, "Text",ExpressionUUID->"10b02c0b-ffe9-445d-b996-4730440e9704"],
+Cell[2685, 93, 584, 17, 64, "Text",ExpressionUUID->"8551058d-fc7c-4165-954c-d3af6987d689"],
+Cell[3272, 112, 331, 7, 28, "Text",ExpressionUUID->"247471e4-44a0-447b-8629-9579817d1c9e",
+ CellOpen->False],
+Cell[3606, 121, 99, 1, 5, "PageBreak",ExpressionUUID->"08eb2083-27c6-4959-8919-b18db5895c26",
+ PageBreakBelow->True],
+Cell[CellGroupData[{
+Cell[3730, 126, 267, 10, 94, "Section",ExpressionUUID->"1f4ff1b2-a818-4f1d-be0f-070da4a8a5b2"],
+Cell[4000, 138, 267, 4, 79, "Text",ExpressionUUID->"b3eb2150-386a-4af2-a2a0-137abc0b941d"],
+Cell[4270, 144, 269, 4, 79, "Text",ExpressionUUID->"4824acf7-936a-4808-9391-a2e238337239"],
+Cell[4542, 150, 221, 3, 79, "Text",ExpressionUUID->"b08ff14d-ea0c-4dad-b39f-a3c44bce1c3c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4800, 158, 280, 10, 94, "Section",ExpressionUUID->"cf01f001-2704-4033-a300-49b62ce6006e"],
+Cell[5083, 170, 401, 7, 109, "Text",ExpressionUUID->"bc5694a3-d4df-45c6-ab65-7eb769bad6cb"],
+Cell[5487, 179, 202, 4, 48, "Text",ExpressionUUID->"6f0dadba-c6bf-4588-a834-5c5a78858a76"],
+Cell[5692, 185, 446, 8, 79, "Text",ExpressionUUID->"64f02afd-f07b-490c-93b2-658fede17666"],
+Cell[6141, 195, 208, 5, 48, "Text",ExpressionUUID->"c881aed6-f912-4bea-9b40-65a1d11ebf96"],
+Cell[CellGroupData[{
+Cell[6374, 204, 156, 4, 46, "Item",ExpressionUUID->"a44a5dee-1afb-4898-8bf0-7f0e9e3777c5"],
+Cell[6533, 210, 369, 7, 109, "Text",ExpressionUUID->"3ee8298a-949c-4e8e-b121-ca7a109dc809"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6939, 222, 154, 4, 46, "Item",ExpressionUUID->"4f4db47d-5600-4dcb-a069-0c03581b56a4"],
+Cell[7096, 228, 609, 10, 170, "Text",ExpressionUUID->"366e1a22-72a7-4c04-98ab-680d4e0fa22b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7742, 243, 165, 4, 46, "Item",ExpressionUUID->"6015c0dc-3d20-4a2c-9bc9-5409e9916cda"],
+Cell[7910, 249, 260, 5, 79, "Text",ExpressionUUID->"7bfeffec-f5a4-493d-a4d9-33ffc9458e77"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8219, 260, 304, 10, 145, "Section",ExpressionUUID->"737d8d37-dc75-4b22-bde1-74173d9ecc4d"],
+Cell[8526, 272, 297, 4, 109, "Text",ExpressionUUID->"1ccb3210-e986-4bfb-ba68-9fbf737ad3ed"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8860, 281, 318, 10, 145, "Section",ExpressionUUID->"a70bd733-df30-4534-800c-ab33c21d6bcf"],
+Cell[9181, 293, 250, 4, 79, "Text",ExpressionUUID->"928f707a-fd5d-4815-bc50-3d85179f35a3"],
+Cell[9434, 299, 195, 3, 48, "Text",ExpressionUUID->"d1cee95e-305d-484c-99f1-749e4352b7c5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9666, 307, 274, 10, 94, "Section",ExpressionUUID->"402d75ab-fde6-40ff-8d42-99777b02e3c6"],
+Cell[9943, 319, 218, 5, 48, "Text",ExpressionUUID->"a79c1d1f-0f37-4f6b-8e45-42472e98274b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10198, 329, 335, 10, 145, "Section",ExpressionUUID->"d045d7f4-392c-45ed-8363-71dfeac5362f"],
+Cell[10536, 341, 350, 7, 79, "Text",ExpressionUUID->"7cc083bc-eafe-4e39-bb84-9b145532a227"],
+Cell[10889, 350, 249, 5, 79, "Text",ExpressionUUID->"495a1eed-bd22-4104-900c-d045b3ebd7bd"],
+Cell[11141, 357, 310, 6, 79, "Text",ExpressionUUID->"d6f159bc-de0b-4c95-90c3-29493e25e65d"],
+Cell[11454, 365, 143, 2, 48, "Text",ExpressionUUID->"35af0b81-2b55-49ca-9476-de6eb5d42942"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11634, 372, 339, 10, 94, "Section",ExpressionUUID->"823427e4-ffac-4299-89f1-aca9d8f64a74"],
+Cell[11976, 384, 346, 7, 109, "Text",ExpressionUUID->"4b8c7ebe-2655-494e-9569-53396614cdaa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12359, 396, 271, 10, 94, "Section",ExpressionUUID->"c2109e5d-6a24-4a7b-81d8-dbffd49b3301"],
+Cell[12633, 408, 238, 6, 48, "Text",ExpressionUUID->"15d9901f-a9a5-4708-9d4f-b5b320cb9469"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12908, 419, 267, 10, 94, "Section",ExpressionUUID->"2cabf4d4-23b7-41da-b076-e8191bcff731"],
+Cell[13178, 431, 415, 8, 109, "Text",ExpressionUUID->"b049e5af-566a-4f54-912e-b1dbc9b0c97c"],
+Cell[13596, 441, 211, 3, 79, "Text",ExpressionUUID->"d7516f47-ba0a-4769-ae39-2843dcc023cf"],
+Cell[13810, 446, 185, 4, 48, "Text",ExpressionUUID->"6c0aca3d-0bf0-42e9-a43d-56df1a8e2bcd"],
+Cell[13998, 452, 164, 2, 48, "Text",ExpressionUUID->"74359437-cac7-4498-b11e-38a2d6bcaeca"],
+Cell[14165, 456, 157, 2, 48, "Text",ExpressionUUID->"4100bd47-59cc-4e17-a2db-f5a35bacc7fa"],
+Cell[14325, 460, 192, 4, 48, "Text",ExpressionUUID->"fcab5ad6-9115-4520-86b5-55196f966614"],
+Cell[14520, 466, 498, 12, 109, "Text",ExpressionUUID->"3ffd43fb-81fd-4b6e-8e38-174495412572"],
+Cell[15021, 480, 161, 2, 48, "Text",ExpressionUUID->"1c01e0e2-a966-4019-993a-48542adf30f5"],
+Cell[15185, 484, 160, 2, 48, "Text",ExpressionUUID->"d62b40f2-3212-4e37-8bc0-823703985e80"],
+Cell[CellGroupData[{
+Cell[15370, 490, 277, 8, 44, "ItemNumbered",ExpressionUUID->"117d1cd0-35ac-4a32-a99e-c5bb78f6b707"],
+Cell[15650, 500, 277, 8, 44, "ItemNumbered",ExpressionUUID->"b4d40151-6821-4089-9aed-1982aa6e1eaf"],
+Cell[15930, 510, 277, 8, 44, "ItemNumbered",ExpressionUUID->"9df389dd-4ff9-4d22-bd88-6d8b0073348e"],
+Cell[16210, 520, 82, 0, 44, "ItemNumbered",ExpressionUUID->"bdda91e2-73e2-4e41-a58d-604ab358a8c7"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16341, 526, 273, 10, 94, "Section",ExpressionUUID->"0a791bb5-ad77-45cb-980b-4f29f1932c26"],
+Cell[16617, 538, 326, 6, 79, "Text",ExpressionUUID->"fb7071b5-d50a-4ca9-b19e-db678a6932e8"],
+Cell[16946, 546, 156, 2, 48, "Text",ExpressionUUID->"a4fdce3c-1058-4141-ab5b-a21b44d6a567"],
+Cell[17105, 550, 110, 0, 48, "Text",ExpressionUUID->"dad20510-da48-49df-a0df-bdb4ea8c0fa9"],
+Cell[CellGroupData[{
+Cell[17240, 554, 283, 8, 44, "ItemNumbered",ExpressionUUID->"7315988d-d7d6-455f-9206-05d909ae42a9"],
+Cell[17526, 564, 283, 8, 44, "ItemNumbered",ExpressionUUID->"9da525a6-a06c-4c93-8d09-173bfe691019"],
+Cell[17812, 574, 283, 8, 44, "ItemNumbered",ExpressionUUID->"b51cd941-7d61-4c04-93c5-b567a2bf0710"],
+Cell[18098, 584, 82, 0, 44, "ItemNumbered",ExpressionUUID->"70770c14-e9bb-4e4f-ac29-6806da066caa"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18229, 590, 300, 10, 145, "Section",ExpressionUUID->"c5f3905f-acd2-4101-a8cd-086559b3808e"],
+Cell[18532, 602, 140, 2, 44, "Item",ExpressionUUID->"e7d89411-7cae-403b-815e-616c8acd7703"],
+Cell[18675, 606, 251, 7, 44, "Item",ExpressionUUID->"3ba787b1-487e-42dc-aad0-35d00d50453b"],
+Cell[18929, 615, 194, 3, 79, "Text",ExpressionUUID->"b486fc2e-5c1f-4cef-89b2-7fbc967c3402"],
+Cell[19126, 620, 192, 3, 79, "Text",ExpressionUUID->"c123f466-6f04-415c-ab94-912c89827b3c"],
+Cell[19321, 625, 171, 3, 48, "Text",ExpressionUUID->"fbc66d6d-2c45-4cb8-a2b0-14b137903f6c"],
+Cell[CellGroupData[{
+Cell[19517, 632, 362, 10, 42, "ItemNumbered",ExpressionUUID->"4bb434ba-ee1d-4035-8669-3cd8fa132356"],
+Cell[19882, 644, 362, 10, 42, "ItemNumbered",ExpressionUUID->"6bb577de-4d30-44e5-a98d-8e8d5508fbc3"],
+Cell[20247, 656, 362, 10, 42, "ItemNumbered",ExpressionUUID->"5b259678-8307-4b7d-9af5-13c4a69c50fd"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20658, 672, 104, 0, 94, "Section",ExpressionUUID->"d5b804d8-3977-43d5-9b45-30a9c1e2c519"],
+Cell[20765, 674, 305, 6, 79, "Text",ExpressionUUID->"9db82ff7-71f9-4c14-98cb-b9971a266f70"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21107, 685, 263, 10, 94, "Section",ExpressionUUID->"4bc46e55-1713-46f1-9657-dbbe2fc5fcb5"],
+Cell[21373, 697, 245, 4, 79, "Text",ExpressionUUID->"1664835e-7a82-455a-ae03-30bfbf058720"],
+Cell[21621, 703, 273, 4, 79, "Text",ExpressionUUID->"ce63d789-da91-411d-a24b-abd7a60f06a4"],
+Cell[21897, 709, 301, 4, 109, "Text",ExpressionUUID->"98e62b71-b93f-470e-a7bb-4735e6d6feb2"],
+Cell[22201, 715, 206, 3, 79, "Text",ExpressionUUID->"108168be-18fe-46ba-acc5-a35c09ce4eb9"],
+Cell[CellGroupData[{
+Cell[22432, 722, 834, 19, 226, "Input",ExpressionUUID->"abe1d111-dc77-4a1c-9032-270c42789685",
+ InitializationCell->True],
+Cell[23269, 743, 771, 18, 64, "Output",ExpressionUUID->"c9b16ed4-fb76-427e-bfa2-cfe8162082d3"],
+Cell[24043, 763, 676, 16, 64, "Output",ExpressionUUID->"fff9a336-15d8-4ca1-980b-d21a97029b89"]
+}, {2, 3}]],
+Cell[24734, 782, 172, 3, 48, "Text",ExpressionUUID->"74080eab-8baa-4b4d-8f48-5c27a41d4a8f"],
+Cell[24909, 787, 177, 3, 48, "Text",ExpressionUUID->"a9977392-7360-4941-8ca2-f50fd04c0e92"],
+Cell[25089, 792, 110, 0, 48, "Text",ExpressionUUID->"0be6f085-c368-4d6b-b985-659f66b2bd2f"],
+Cell[CellGroupData[{
+Cell[25224, 796, 338, 5, 67, "ItemNumbered",ExpressionUUID->"eee00e9c-05f4-4619-942e-61a64df59056"],
+Cell[25565, 803, 583, 13, 67, "ItemNumbered",ExpressionUUID->"3efba9a2-4217-4749-880b-66bf8f940c32"],
+Cell[26151, 818, 499, 7, 67, "ItemNumbered",ExpressionUUID->"c0978165-1c08-4272-8a7a-8fd2d0943a10"],
+Cell[26653, 827, 545, 12, 67, "ItemNumbered",ExpressionUUID->"ac0fa99c-e24d-4c40-a1ce-92df56916d13"],
+Cell[27201, 841, 396, 11, 42, "ItemNumbered",ExpressionUUID->"e1e0a668-67d3-4ac3-839d-1686e16e81cc"],
+Cell[27600, 854, 302, 6, 67, "ItemNumbered",ExpressionUUID->"d02c6005-0508-4358-b331-095e0ae58951"],
+Cell[27905, 862, 317, 10, 42, "ItemNumbered",ExpressionUUID->"80a6cd3f-6b6a-4007-90c6-68023a3c5578"],
+Cell[28225, 874, 129, 2, 42, "ItemNumbered",ExpressionUUID->"03dcdad1-94ac-464a-b88d-a6bfae2a6449"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
